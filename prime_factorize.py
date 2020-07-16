@@ -4,7 +4,7 @@ import sys, math, datetime, time
 
 from numba import jit
 
-jit
+@jit #for large numbers it improves performance e.g. 32423456465 from 38 secs to 3.8 secs on my system
 def factorize(n):
 	factors = []
 	i = 2
@@ -18,7 +18,7 @@ def factorize(n):
 			i +=1
 	return factors
 
-jit
+
 def condense(L):
 	prime, count, list = 0,0,[]
 	for x in L:
